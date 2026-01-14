@@ -1,0 +1,31 @@
+[
+    {
+        "title": "DHURANDHAR",
+        "poster": "m2.png",
+        "language": "Hindi",
+        "certificate": "A"
+    },
+    {
+        "title": "IKKIS",
+        "poster": "m3.png",
+        "language": "Hindi",
+        "certificate": "UA 13+"
+    },
+    {
+        "title": "THE SPONGEBOB MOVIE",
+        "poster": "m4.png",
+        "language": "English",
+        "certificate": "UA 7+"
+    },
+    {
+        "title": "THE HOUSEMAID",
+        "poster": "m1.png",
+        "language": "English",
+        "certificate": "A"},
+    {
+        "title": "AVATAR : FIRE & ASH",
+        "poster": "m5.png",
+        "language": "English",
+        "certificate": "UA 15+"
+    }
+]

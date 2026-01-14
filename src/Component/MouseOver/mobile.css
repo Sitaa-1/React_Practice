@@ -1,0 +1,6 @@
+.mobile-container{
+    border:3px solid gray
+}
+.mobile-container:hover{
+    border: 3px solid rgb(208, 3, 105);
+}

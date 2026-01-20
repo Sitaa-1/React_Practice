@@ -18,9 +18,11 @@ import { MouseDownUpEvent } from './Component/MouseDown&Up/MouseAnimation.jsx'
 import { MouseMove } from './Component/MouseMoveEvent/mouseMoveEvent.jsx'
 import { KeyUpEvntWithIdPwd } from './Component/KeyEvent/keyUpEx.jsx'
 import { ButtonDemo } from './Component/ButtonEvent/ButonEvntZomEfctClickEx.jsx'
+import { EMICalculator } from './Component/ElementStateEvent/emi_Calculator.jsx'
+import { ElementState } from './Component/ElementStateEvent/element_state.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <ButtonDemo/>
+    <ElementState />
   </StrictMode>,
 )

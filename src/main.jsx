@@ -25,9 +25,10 @@ import { ThrottleDemo } from './Component/Throttle/throttleDemo.jsx'
 import { StopWatch } from './Component/Throttle/stopWatch.jsx'
 import { CarouselDemo } from './Component/Throttle/carousel-demo.jsx'
 import { FullComponentRendering } from './Component/Conditional Rendering/renderFullComponent.jsx'
+import { RenderPartOfComponent } from './Component/Conditional Rendering/partOfComponentRender.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <FullComponentRendering />
+    <RenderPartOfComponent />
   </StrictMode>,
 )

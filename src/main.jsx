@@ -20,9 +20,14 @@ import { KeyUpEvntWithIdPwd } from './Component/KeyEvent/keyUpEx.jsx'
 import { ButtonDemo } from './Component/ButtonEvent/ButonEvntZomEfctClickEx.jsx'
 import { EMICalculator } from './Component/ElementStateEvent/emi_Calculator.jsx'
 import { ElementState } from './Component/ElementStateEvent/element_state.jsx'
+import { DebounceDemo } from './Component/Debounce/debounceDemo.jsx'
+import { ThrottleDemo } from './Component/Throttle/throttleDemo.jsx'
+import { StopWatch } from './Component/Throttle/stopWatch.jsx'
+import { CarouselDemo } from './Component/Throttle/carousel-demo.jsx'
+import { FullComponentRendering } from './Component/Conditional Rendering/renderFullComponent.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <ElementState />
+    <FullComponentRendering />
   </StrictMode>,
 )

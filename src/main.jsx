@@ -28,11 +28,14 @@ import { FullComponentRendering } from './Component/Conditional Rendering/render
 import { RenderPartOfComponent } from './Component/Conditional Rendering/partOfComponentRender.jsx'
 import { NavbarComponent } from './Component/ControlledComponent/navbar.jsx'
 import { HomeComponent } from './Component/ControlledComponent/home.jsx'
-import { ContextAPIDemo } from './Component/ContextAPI_WeatherApp/contextApiDemo.jsx'
+import { ContextAPIDemo} from './Component/ContextAPI_WeatherApp/contextApiDemo.jsx'
 import { WeatherApp } from './Component/ContextAPI_WeatherApp/WeatherApp/weatherApp.jsx'
+import { ParentComponent } from './Component/ContextAPI_WeatherApp/parentComponent.jsx'
+import { FormDemo } from './Component/ReactForms/formWithout3rdParty.jsx'
+import { FormikForm } from './Component/ReactForms/formWithFormik.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <WeatherApp />
+    <FormikForm />
   </StrictMode>,
 )

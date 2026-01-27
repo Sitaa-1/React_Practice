@@ -2,33 +2,33 @@ import { useFormik } from "formik"
 
 export function FormikForm(){
     function ValidateUser(userDetails){
-        var error = {UserName:'',Age:'',City:'',Gender:''};
+        var errors = {UserName:'',Age:'',City:'',Gender:''};
 
         if(userDetails.UserName.length===0){
-            error.UserName = 'User Name Require'
+            errors.UserName = 'User Name Require'
         }else if(userDetails.UserName.length < 4){
-            error.UserName = 'Name too shot'
-        }else{
-            error.UserName = '';
+            errors.UserName = 'Name too shot'
         }
-
+        
         if(userDetails.Age.length===0){
-            error.Age='Age Require';
+            errors.Age='Age Require';
         }else{
             if(isNaN(userDetails.Age)){
-                error.Age = 'Age must be number';
-            }else{
-                error.Age = '';
+                errors.Age = 'Age must be number';
             }
         }
 
         if(userDetails.City==='-1'){
-            error.City = 'Please select city';
-        }else{
-            error.City = '';
+            errors.City = 'Please select city';
         }
 
-        return error;
+        if(userDetails.Gender===''){
+            errors.Gender = 'select option';
+        }else{
+            errors.Gender='';
+        }
+
+        return errors;
     }
 
     const formik = useFormik({
@@ -50,7 +50,7 @@ export function FormikForm(){
             <form onSubmit={formik.handleSubmit}>
                 <dl>
                     <dt>UserName</dt>
-                    <dd><input type="text"  name="UserName" onChange={formik.handleChange}/></dd>
+                    <dd><input type="text" name="UserName" onChange={formik.handleChange}/></dd>
                     <dd className="text-danger">{formik.errors.UserName}</dd>
                     <dt>Age</dt>
                     <dd><input type="text" name="Age" onChange={formik.handleChange}/></dd>
@@ -69,6 +69,7 @@ export function FormikForm(){
                         <input type="radio" name="Gender" value="Male" onChange={formik.handleChange}/>Male 
                         <input type="radio" name="Gender" value="Female" onChange={formik.handleChange}/>Female
                     </dd>
+                    <dd className="text-danger">{formik.errors.Gender}</dd>
                 </dl>
                 <button type="submit">Submit</button>
             </form>

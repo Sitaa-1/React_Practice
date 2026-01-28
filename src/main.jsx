@@ -34,9 +34,10 @@ import { ParentComponent } from './Component/ContextAPI_WeatherApp/parentCompone
 import { FormDemo } from './Component/ReactForms/formWithout3rdParty.jsx'
 import { FormikForm } from './Component/ReactForms/formWithFormik.jsx'
 import { FormYupDemo } from './Component/ReactForms/formWithYupvalidation.jsx'
+import { FormikComponentDemo } from './Component/ReactForms/formwithformikcomponent.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <FormYupDemo />
+    <FormikComponentDemo />
   </StrictMode>,
 )

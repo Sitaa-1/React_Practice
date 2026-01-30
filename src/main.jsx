@@ -37,9 +37,10 @@ import { FormYupDemo } from './Component/ReactForms/formWithYupvalidation.jsx'
 import { FormikComponentDemo } from './Component/ReactForms/formwithformikcomponent.jsx'
 import { OptionalChaing } from './Component/JSOptionalChainingEx/example.jsx'
 import { ReactHookFormDemo } from './Component/ReactForms/ReactHookFromDemo.jsx'
+import { TutorialIndex } from './Component/React-Routing/BasicExample/tutorial-index.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <ReactHookFormDemo />
+    <TutorialIndex />
   </StrictMode>,
 )

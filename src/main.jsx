@@ -38,9 +38,10 @@ import { FormikComponentDemo } from './Component/ReactForms/formwithformikcompon
 import { OptionalChaing } from './Component/JSOptionalChainingEx/example.jsx'
 import { ReactHookFormDemo } from './Component/ReactForms/ReactHookFromDemo.jsx'
 import { TutorialIndex } from './Component/React-Routing/BasicExample/tutorial-index.jsx'
+import { FakeStoreIndex } from './Component/React-Routing/BasicExample/fakestore-index.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <TutorialIndex />
+    <FakeStoreIndex />
   </StrictMode>,
 )

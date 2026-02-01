@@ -1,7 +1,16 @@
-import { useForm } from "react-hook-form";
+import { useFieldArray, useForm } from "react-hook-form";
 
 export function ReactHookFormDemo(){
-    const{register,handleSubmit,formState:{errors}} = useForm();
+    const{register,handleSubmit, control,formState:{errors}} = useForm({
+        defaultValues:{
+            files: [{file: null}]
+        }
+    });
+
+    const{fields,append,remove} = useFieldArray({
+        control,
+        name: "files"
+    });
 
     const submit = (user)=>{
         console.log(user);
@@ -29,9 +38,18 @@ export function ReactHookFormDemo(){
                     </dd>
                     <dt>Upload photo</dt>
                     <dd>
-                        <input type="file" />
-                        <button className="btn d-inline btn-link" >Upload more</button>
-                        <button className="btn bi vi-trash d-inline"></button>
+                        
+                        {fields.map((field,index) =>(
+                            <div key={field.id} style={{marginBlock:"5px"}}>
+                                <input type="file" {...register(`files.${index}.file`)}/>
+
+                                {fields.length > 1 && (
+                                    <button type="button" onClick={() =>remove(index)} className="btn bi vi-trash d-inline">remove</button>
+                                )}
+                            </div>
+                        ))}
+                        <button className="btn d-inline btn-link" onClick={()=>append({file:null})}>Upload more</button>
+                        
                     </dd>
                 </dl>
                 <button type="submit">Register</button>

@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom"
+import { Link, Outlet, useParams } from "react-router-dom"
 
 export function FakeStoreProduct(){
 
@@ -15,23 +15,30 @@ export function FakeStoreProduct(){
     }
     useEffect(()=>{
         LoadProduct();
-    })
+    },[])
     return(
             <div className="container-fluid mt-4">
                 <h4>Products</h4>
-                <div className="d-flex flex-wrap flax-row" style={{width:'600px'}}>
-                    {
-                        products.map(product=>
-                            <div className="card m-2 p-2" style={{width:'180px'}} key={product.id}>
-                                <div className="card-header">
-                                    <img className="card-img-top" src={product.image} height="90"/>
-                                </div>
-                                <div className="card-footer">
-                                    <Link to={`/details/${product.id}`} className="btn btn-dark w-150">Details</Link>
-                                </div>
-                            </div>
-                        )
-                    }
+                <div className="row">
+                    <div className="col-6">
+                        <div className="d-flex flex-wrap flax-row" style={{width:'600px'}}>
+                            {
+                                products.map(product=>
+                                    <div className="card m-2 p-2" style={{width:'180px'}} key={product.id}>
+                                        <div className="card-header">
+                                            <img className="card-img-top" src={product.image} height="90"/>
+                                        </div>
+                                        <div className="card-footer">
+                                            <Link to={`details/${product.id}`} className="btn btn-dark w-150">Details</Link>
+                                        </div>
+                                    </div>
+                                )
+                            }
+                        </div>
+                    </div>
+                    <div className="col-6">
+                        <Outlet />
+                    </div>
                 </div>
                 <Link to="/">Back to categorys</Link>
             </div>

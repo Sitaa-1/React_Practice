@@ -14,7 +14,7 @@ export function FakeStoreDetails(){
     }
     useEffect(()=>{
         LoadProductDetails();
-    },[])
+    },[params.id])
     return(
         <div className="container-fluid mt-4 d-flex justify-content-center align-items-center flex-column">
             <h2>Details</h2>
@@ -28,7 +28,7 @@ export function FakeStoreDetails(){
                 <dt>Price</dt>
                 <dd>{product.price.toLocaleString('en-us',{style:'currency',currency:'USD'})}</dd>
             </dl>
-            <Link to={`/product/${product.category}`}>Back to Products</Link>
+            {/* <Link to={`/product/${product.category}`}>Back to Products</Link> */}
         </div>
     )
 }

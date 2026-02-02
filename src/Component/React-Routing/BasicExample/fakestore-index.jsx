@@ -13,8 +13,10 @@ export function FakeStoreIndex(){
                 <section>
                     <Routes>
                         <Route path="/" element={<FakeStoreHome />}></Route>
-                        <Route path="/product/:category" element={<FakeStoreProduct />}></Route>
-                        <Route path="/details/:id" element={<FakeStoreDetails />}></Route>
+                        <Route path="/product/:category" element={<FakeStoreProduct />}>
+                            <Route path="details/:id" element={<FakeStoreDetails />}></Route>
+                        </Route>
+                        
                     </Routes>
                 </section>
             </BrowserRouter>

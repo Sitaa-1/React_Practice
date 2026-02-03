@@ -26,7 +26,7 @@ export function FakeStoreProduct(){
                                 products.map(product=>
                                     <div className="card m-2 p-2" style={{width:'180px'}} key={product.id}>
                                         <div className="card-header">
-                                            <img className="card-img-top" src={product.image} height="90"/>
+                                            <img className="card-img-top" src={product.image} height="92"/>
                                         </div>
                                         <div className="card-footer">
                                             <Link to={`details/${product.id}`} className="btn btn-dark w-150">Details</Link>

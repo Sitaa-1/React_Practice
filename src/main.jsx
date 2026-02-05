@@ -39,9 +39,10 @@ import { OptionalChaing } from './Component/JSOptionalChainingEx/example.jsx'
 import { ReactHookFormDemo } from './Component/ReactForms/ReactHookFromDemo.jsx'
 import { TutorialIndex } from './Component/React-Routing/BasicExample/tutorial-index.jsx'
 import { FakeStoreIndex } from './Component/React-Routing/BasicExample/fakestore-index.jsx'
+import { MuiDemo } from './Component/ReactProjectWithMUI/mui-demo.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <FakeStoreIndex />
+    <MuiDemo />
   </StrictMode>,
 )

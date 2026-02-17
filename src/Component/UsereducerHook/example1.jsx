@@ -1,4 +1,3 @@
-import { caES } from "@mui/material/locale";
 import { useReducer } from "react";
 
 let initialState = {
@@ -7,11 +6,10 @@ let initialState = {
 function reducer(state, action){
 switch(action.type){
     case "like":
-    return {likes : state.likes + 1
-    case "dislike";
-    return {likes: state.like-1}
+    return { likes : state.likes + 1 }
+    case "dislike":
+    return { likes: state.like-1}
     }
-}
 }
 
 export function ReducerDemo(){
